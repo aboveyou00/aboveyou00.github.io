@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+  var scrolled = false;
+  
   $(window).resize(function() {
     var ratio = $("img.contained_img").width() / $("img.contained_img").height();
     var max_hit = $(window).width() / ratio;
@@ -21,8 +23,18 @@ $(document).ready(function() {
     var percent = $(window).scrollTop() / $(window).height();
     if (percent < 0) percent = 0;
     if (percent > 1) percent = 1;
+    if (percent > 0 && !scrolled) {
+      scrolled = true;
+      $("div.scroll_notification").fadeOut(1000, function() { $(this).detach(); });
+    }
     $("img.contained_img").css({top: -give*percent});
   }).scroll();
   
+  window.setTimeout(function() {
+    if (!scrolled) {
+      $("div.bday_1_relative").append('<div class="scroll_notification">&darr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scroll&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&darr;</div>');
+      $("div.scroll_notification").hide().fadeIn(1000);
+    }
+  }, 5000);
   
 });

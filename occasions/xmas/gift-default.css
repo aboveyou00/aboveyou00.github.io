@@ -28,14 +28,31 @@ body {
 
 .coupon {
   margin:0 auto;
+  margin-top: 80px;
   margin-bottom:200px;
   max-width:800px;
   background:white;
-  border:8px dashed red;
   text-align:center;
   padding:80px;
   font-size:40px;
   font-style:italic;
+  
+  border-width:40px;
+  border-style:solid;
+  border-color:rgb(200,0,0);
+  border-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(200, 0, 0, .85) 0px,
+      rgba(200, 0, 0, .95) 5px,
+      transparent 5px,
+      transparent 10px,
+      rgba(200, 0, 0, .85) 10px, 
+      rgba(200, 0, 0, .95) 15px,
+      transparent 15px,
+      transparent 20px
+    ) 40 40 40 40 stretch;
+  
 }
 .amt {
   font-style:normal;

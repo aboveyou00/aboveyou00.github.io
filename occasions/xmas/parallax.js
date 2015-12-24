@@ -32,3 +32,7 @@ $(document).ready(function() {
     });
   }).scroll();
 });
+//Work around a race condition - make sure images have correct dimensions
+$(window).load(function() {
+  $(window).resize();
+});

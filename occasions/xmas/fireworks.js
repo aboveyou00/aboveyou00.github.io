@@ -543,3 +543,27 @@ addEventHandler(window,'resize',fc.getWindowCoords);
 addEventHandler(window,'scroll',fc.getWindowCoords);
 addEventHandler(window,'load',fc.init);
 addEventHandler(window,'unload',fc.destructor);
+
+$(document).ready(function() {
+  var active = true;
+  $(window).blur(function(){
+    active = false;
+  });
+  $(window).focus(function(){
+    active = true;
+  });
+  
+  window.setInterval(function() {
+    if (active) {
+      $(".fireworks").each(function(index, element) {
+        var windowScrollTop = $(window).scrollTop();
+        var scrollOffset = $(element).offset();
+        if (windowScrollTop < scrollOffset.top + $(element).height() &&
+            windowScrollTop + $(window).height() > scrollOffset.top)
+        {
+          createFirework(18,76,7,1,null,null,null,null,false,false);
+        }
+      });
+    }
+  }, 500);
+});

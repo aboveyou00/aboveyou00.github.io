@@ -51,7 +51,6 @@ body {
 .section1 {
   text-align: center;
   margin:0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000078+0,000078+25,000000+100 */
   background: black; /* Old browsers */
   background: -moz-linear-gradient(top, rgb(0,0,80) 0%, rgb(0,0,80) 25%, rgb(0,0,0) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgb(0,0,80) 0%, rgb(0,0,80) 25%, rgb(0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */

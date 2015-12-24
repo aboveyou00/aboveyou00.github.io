@@ -22,10 +22,11 @@ $(document).ready(function() {
   }).resize();
   
   $(document).scroll(function() {
+    var windowScrollTop = $(window).scrollTop();
     $(".parallax").each(function(index, element) {
       var img = $(element).find(".parallax_img");
       var give = img.height() - $(window).height();
-      var percent = ($(window).scrollTop() - $(element).offset().top) / $(window).height();
+      var percent = (windowScrollTop - $(element).offset().top) / $(window).height();
       if (percent < 0) percent = 0;
       if (percent > 1) percent = 1;
       img.css({top: -give*percent});

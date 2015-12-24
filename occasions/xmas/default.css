@@ -1,0 +1,136 @@
+body {
+  margin:0;
+  font-family:Calibri;
+}
+
+.parallax {
+  width:100%;
+}
+.parallax_relative {
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+.parallax_shadow {
+  position:absolute;
+  width:100%;
+  box-shadow: inset 0px -20px 20px rgba(0,0,0,.4);
+}
+.parallax_container {
+  position:absolute;
+  width:100%;
+}
+.parallax_img {
+  width:100%;
+  position: absolute;
+  z-index: -200;
+}
+.overlay {
+  position:absolute;
+}
+.scroll_notification {
+  position: absolute;
+  right:120px;
+  bottom:0px;
+  z-index: -100;
+  background-color:rgba(255,255,255,.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding:20px 20px;
+  font-size:24px;
+  animation-name: flashAlpha;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes flashAlpha {
+  0% { background-color:rgba(255,255,255,.2); }
+  50% { background-color:rgba(255,255,255,.4); }
+  100% { background-color:rgba(255,255,255,.2); }
+}
+
+.section1 {
+  text-align: center;
+  margin:0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000078+0,000078+25,000000+100 */
+  background: black; /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(0,0,80) 0%, rgb(0,0,80) 25%, rgb(0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(0,0,80) 0%, rgb(0,0,80) 25%, rgb(0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(0,0,80) 0%, rgb(0,0,80) 25%, rgb(0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000060', endColorstr='#000000',GradientType=0); /* IE6-9 */
+}
+.section1-inner, .section2-inner {
+  padding:180px 0;
+}
+.section1-inner > h1, .section2-inner > h1 {
+  margin:0;
+  font-size:120px;
+  color:white;
+}
+.section1-inner > h2, .section2-inner > h2 {
+  margin:0;
+  font-size:40px;
+  color:white;
+}
+
+div.fireworks {
+  background:black;
+}
+
+div.section2 {
+  background:rgb(200,0,0);
+  text-align: center;
+  margin:0;
+}
+div.section2-inner {
+  padding:180px 0;
+  padding-bottom:220px;
+}
+
+div.presents {
+  margin:0 auto;
+  padding:0;
+  max-width:800px;
+  background:red;
+}
+
+.clear {
+  padding-top:80px;
+  clear:both;
+}
+
+#fireworks-template {
+ display:none;
+}
+
+#fireContainer {
+ position:absolute;
+ left:0px;
+ top:0px;
+ z-index:706;
+}
+
+.firework {
+ /* containing box which flies out first */
+ position:absolute;
+ left:0px;
+ top:0px;
+ font-size:1px;
+ width:4px;
+ height:4px;
+ border:1px solid #333;
+ background:#666;
+}
+
+.fireworkParticle {
+ /* elements that explode from the container */
+ position:absolute;
+ font-size:1px;
+ width:10px;
+ height:10px;
+ overflow:hidden;
+}
+
+.fireworkParticle img {
+ display:block;
+ width:100px;
+}

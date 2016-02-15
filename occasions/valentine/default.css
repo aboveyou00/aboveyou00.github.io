@@ -1,0 +1,235 @@
+body {
+  margin:0;
+  font-family:Calibri;
+}
+
+.parallax {
+  width:100%;
+}
+.parallax_relative {
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+.parallax_shadow {
+  position:absolute;
+  width:100%;
+  box-shadow: inset 0px -20px 20px rgba(0,0,0,.4);
+}
+.parallax_container {
+  position:absolute;
+  width:100%;
+}
+.parallax_img {
+  width:100%;
+  position: absolute;
+  z-index: -200;
+}
+.overlay {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: 0;
+  text-align: center;
+  animation: heartSizeAnimation 8s ease-in-out infinite;
+}
+.overlay-heart {
+  animation: heartAnimation 10s ease-in-out infinite;
+}
+@keyframes heartAnimation {
+  0% {
+    transform: rotate(7.5deg) translateY(-200px);
+  }
+  50% {
+    transform: rotate(-7.5deg) translateY(-200px);
+  }
+  100% {
+    transform: rotate(7.5deg) translateY(-200px);
+  }
+}
+@keyframes heartSizeAnimation {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.overlay-heart:before, .overlay-heart:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 250px;
+  height: 400px;
+  -moz-border-radius: 250px 250px 0 0;
+  border-radius: 250px 250px 0 0;
+  z-index: -200;
+  background: rgba(180,0,0,1);
+}
+.overlay-heart:before {
+  left: 250px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.overlay-heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin :100% 100%;
+}
+.msg1 {
+  font-family: Cambria;
+  position: relative;
+  top: 120px;
+  color: darkgray;
+  font-variant: small-caps;
+  transform: translateX(22px);
+}
+
+.heart:before {
+  content: "\2764";
+  color:red;
+  font-size: 300%;
+  vertical-align: middle;
+}
+.heart.pink:before {
+  color:pink;
+}
+.heart.purple:before {
+  color:purple;
+}
+.heart.white:before {
+  color:white;
+}
+.heart.red:before {
+  color:red;
+}
+
+.floating.heart {
+  position: absolute;
+  font-size:33px;
+}
+.deep.floating.heart {
+  z-index: -1;
+}
+.small.floating.heart {
+  font-size:15px;
+}
+.small_medium.floating.heart {
+  font-size:25px;
+}
+.large_medium.floating.heart {
+  font-size:40px;
+}
+.large.floating.heart {
+  font-size:50px;
+}
+
+.floating.heart {
+  animation: floatingHeartAnimation 4s ease-in-out infinite;
+}
+@keyframes floatingHeartAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(.5) rotate(0deg);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll_notification {
+  position: absolute;
+  right:120px;
+  bottom:0px;
+  z-index: -100;
+  background-color:rgba(255,255,255,.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding:20px 20px;
+  font-size:24px;
+  animation-name: flashAlpha;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes flashAlpha {
+  0% { background-color:rgba(255,255,255,.2); }
+  50% { background-color:rgba(255,255,255,.4); }
+  100% { background-color:rgba(255,255,255,.2); }
+}
+
+.section1 {
+  background:black;
+  text-align: center;
+  margin:0;
+}
+.section1-inner, .section2-inner {
+  padding:180px 0;
+}
+.section1-inner > h1, .section2-inner > h1 {
+  margin:0;
+  font-size:120px;
+  color:white;
+}
+.section1-inner > h2, .section2-inner > h2 {
+  margin:0;
+  font-size:40px;
+  color:white;
+}
+
+div.section2 {
+  background:rgb(200,0,0);
+  text-align: center;
+  margin:0;
+}
+div.section2-inner {
+  padding:180px 0;
+  padding-bottom:220px;
+}
+
+.clear {
+  padding-top:80px;
+  clear:both;
+}
